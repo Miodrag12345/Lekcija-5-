@@ -1,15 +1,16 @@
 <template>
 
-  <products :products-list="productList" />
+  <products-page :products-list="productList" />
 
 </template>
 
 <script>
-import Products from "@/components/Products.vue";
+
+import ProductsPage from "@/components/ProductsPage.vue";
 
 export default {
   name: 'App',
-  components: {Products},
+  components: {ProductsPage},
   data: () => ({
     productList: [
       {
