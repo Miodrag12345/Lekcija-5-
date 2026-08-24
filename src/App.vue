@@ -1,42 +1,49 @@
 <template>
-
-  <products-page :products-list="productList" />
-
+  <products-page />
 </template>
 
 <script>
-
 import ProductsPage from "@/components/ProductsPage.vue";
 
 export default {
   name: 'App',
-  components: {ProductsPage},
+  components: { ProductsPage },
+  provide() {
+    return {
+      productList: this.productList
+    }
+  },
   data: () => ({
     productList: [
       {
         name: "HTML Course",
         price: 150,
-        length: "3 months"
+        length: "3 months",
+        discount: 20
       },
       {
         name: "CSS Course",
         price: 120,
-        length: "2 months"
+        length: "2 months",
+        discount: 30
       },
       {
         name: "JavaScript Course",
         price: 200,
-        length: "4 months"
+        length: "4 months",
+        discount: 25
       },
       {
         name: "React Course",
         price: 250,
-        length: "5 months"
+        length: "5 months",
+        discount: 50
       },
       {
         name: "Node.js Course",
         price: 220,
-        length: "4 months"
+        length: "4 months",
+        discount: 50
       }
     ]
   })

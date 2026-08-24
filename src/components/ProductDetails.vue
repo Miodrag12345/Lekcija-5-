@@ -1,14 +1,17 @@
 <template>
-<div>Hello world</div>
+  <ul>
+    <li v-for="product in productList" :key ="product.id">
+      {{product.name}}-${{product.price}}
+    </li>
+  </ul>
 </template>
+
 
 <script>
 
 export default {
   name:"ProductsDetails",
-  props: {
-    productList:Array
-  }
+  inject:["productList"],
 
 }
 </script>

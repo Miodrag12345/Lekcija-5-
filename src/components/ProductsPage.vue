@@ -13,8 +13,6 @@ export default {
   components: {
     ProductsDetails
   },
-  props: {
-    productList: Array
-  }
+
 }
 </script>
