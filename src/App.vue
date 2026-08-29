@@ -3,11 +3,11 @@
 </template>
 
 <script>
-import ProductsPage from "@/components/ProductsPage.vue";
+import Page from "@/components/Products/Page.vue";
 
 export default {
   name: 'App',
-  components: { ProductsPage },
+  components: { ProductsPage: Page },
   provide() {
     return {
       productList: this.productList
